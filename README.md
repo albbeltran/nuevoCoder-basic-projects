@@ -6,8 +6,8 @@ La primera semana del cohorte 1 estará dedicada a realizar un proyecto de compl
 
 ## Proyectos
 
-TEAM 1 - Validación de un formulario
-TEAM 2 - Temporizador
+TEAM 1 - Validación de un formulario\
+TEAM 2 - Temporizador\
 TEAM 3 - Calculador
 
 <br/>

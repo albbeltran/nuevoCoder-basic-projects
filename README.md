@@ -1,6 +1,7 @@
 # Cohorte 1.0 - Básicos
 
 La primera semana del cohorte 1 estará dedicada a realizar un proyecto de complejidad básica-intermedia en equipos, habrá asignado un proyecto para cada equipo, el cual debe de cumplir con las especificaciones dadas y ser entregado en tiempo.
+La fecha límite para entregar tu proyecto es el jueves 30 de junio, a las 11:59 de la noche.
 
 <br/>
 
@@ -21,12 +22,7 @@ En esta etapa queda restringido el uso de librerías y/o frameworks para front-e
 
 ## Entrega
 
-**¿Cuál es la fecha límite?**
-
-La fecha límite para entregar tu proyecto es el jueves 30 de junio, a las 11:59 de la noche.
-
-**¿Cómo subo el proyecto?**
-
+<br/>
 ### Realiza un fork
 
 El primer paso es realizar una bifurcación de este repositorio, la cual debe hacerla solo un integrante del equipo.

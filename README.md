@@ -52,3 +52,4 @@ Cada que hagas cambios, no olvides subirlos al repositorio de tu equipo.
 Una vez que todos hayan realizado los cambios y creado los Pull Requests necesarios al repositorio del equipo, realicen un Pull Request al repositorio principal.
 
 Para hacerlo, diríganse a la página de inicio de la versión bifurcada del repositorio. Hay un botón que dice "Compare & pull request" que está asociado con los cambios realizados.
+

@@ -17,6 +17,8 @@
     <link rel="preload" href="css/style.css" as="style">
     <link href="css/style.css" rel="stylesheet">
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -57,7 +59,7 @@
 
             <div class="contenedor-formulario">
 
-                <form class="formulario" onsubmit="enviarDatos()" autocomplete="on">
+                <form class="formulario" autocomplete="on">
                     <fieldset>
                         <legend>Registro</legend>
                         <div class="contenedor-campos">
@@ -71,7 +73,7 @@
                                 <label>Fecha de nacimiento</label>
                                 <input class="input-text" type="date" placeholder="Fecha de nacimiento" required>
                             </div>
-
+<!--  ->
                             <div class="campos">
                                 <label>Ciudad</label>
                                 <input class="input-text" type="text" placeholder="Ciudad" required>
@@ -96,7 +98,7 @@
                                 <label>Confirmar contraseña</label>
                                 <input class="input-text" type="password" placeholder="Confirmar contraseña" required>
                             </div>
-
+<--  -->
                         </div>
 
 
@@ -114,9 +116,9 @@
 
 
                     <div>
-                        <input class="boton" type="submit" value=" REGISTRARSE">
+                        <input class="boton" type="submit" value=" REGISTRARSE" onclick="enviarDatos()">
                     </div>
-                    
+
                 </form>
             </div>
 
@@ -126,9 +128,35 @@
 
 
             function enviarDatos(){
-             
-                alert("Se enviaron correctamente los datos")
+                let respuestas=document.getElementsByClassName("input-text");
+                let contador=0;
+                for(let i=0; i<respuestas.length;i++){
+                    if (respuestas[i].value===""){
+                        contador+=1
+                    }
+                }
+                if (document.getElementsByClassName("check")[0].validity.valueMissing==true){
+                    contador++;
+                }
+                
+                if (contador!=0){ 
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Completa todos los datos',
+                        footer: 'Es necesario para registrarse',
+                        width:'50%'
+                        
+                })}else{
+                    Swal.fire({
+                        icon: 'success',
+                        title:'Todo genial',
+                        text: 'Datos guardados exitosamente',
+                        time:20000
+                    })
+                }
             }
+            
            
         </script>
     </div>

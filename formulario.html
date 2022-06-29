@@ -57,14 +57,14 @@
 
             <div class="contenedor-formulario">
 
-                <form class="formulario">
+                <form class="formulario" onsubmit="enviarDatos()" autocomplete="on">
                     <fieldset>
                         <legend>Registro</legend>
                         <div class="contenedor-campos">
 
                             <div class="campos">
                                 <label>Nombre completo</label>
-                                <input class="input-text" type="text" placeholder="Nombre" required>
+                                <input id="nombre" class="input-text" type="text" placeholder="Nombre" required>
                             </div>
 
                             <div class="campos">
@@ -97,7 +97,6 @@
                                 <input class="input-text" type="password" placeholder="Confirmar contraseña" required>
                             </div>
 
-
                         </div>
 
 
@@ -117,12 +116,21 @@
                     <div>
                         <input class="boton" type="submit" value=" REGISTRARSE">
                     </div>
+                    
                 </form>
             </div>
 
         </section><!-- contenedor-formulario -->
-
         
+        <script>       
+
+
+            function enviarDatos(){
+             
+                alert("Se enviaron correctamente los datos")
+            }
+           
+        </script>
     </div>
 </body>
 

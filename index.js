@@ -32,7 +32,12 @@ function enviarDatos(e){
         icon: 'success',
         title:'Registro exitoso',
         text: 'Datos guardados exitosamente',
-        time:20000
       })
     }
 }
+
+
+/* TODO:
+  => Refactor del remover el contador
+  => Refactor de la evalucacion de los password
+*/

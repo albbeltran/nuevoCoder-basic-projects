@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
-   
+
     <link rel="preload" href="css/normalize.css" as="style">
     <link href="css/normalize.css" rel="stylesheet">
 
@@ -73,7 +73,7 @@
                                 <label>Fecha de nacimiento</label>
                                 <input class="input-text" type="date" placeholder="Fecha de nacimiento" required>
                             </div>
-<!--  ->
+
                             <div class="campos">
                                 <label>Ciudad</label>
                                 <input class="input-text" type="text" placeholder="Ciudad" required>
@@ -98,7 +98,6 @@
                                 <label>Confirmar contraseña</label>
                                 <input class="input-text" type="password" placeholder="Confirmar contraseña" required>
                             </div>
-<--  -->
                         </div>
 
 
@@ -123,30 +122,33 @@
             </div>
 
         </section><!-- contenedor-formulario -->
-        
-        <script>       
+
+        <script>
 
 
             function enviarDatos(){
                 let respuestas=document.getElementsByClassName("input-text");
+                console.log(respuestas);
                 let contador=0;
                 for(let i=0; i<respuestas.length;i++){
                     if (respuestas[i].value===""){
                         contador+=1
                     }
                 }
+                console.log(contador);
                 if (document.getElementsByClassName("check")[0].validity.valueMissing==true){
                     contador++;
                 }
-                
-                if (contador!=0){ 
+
+                console.log(contador);
+                if (contador!=0){
                     Swal.fire({
                         icon: 'error',
                         title: 'Oops...',
                         text: 'Completa todos los datos',
                         footer: 'Es necesario para registrarse',
                         width:'50%'
-                        
+
                 })}else{
                     Swal.fire({
                         icon: 'success',
@@ -156,8 +158,8 @@
                     })
                 }
             }
-            
-           
+
+
         </script>
     </div>
 </body>

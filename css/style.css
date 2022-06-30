@@ -205,6 +205,36 @@ h1, h2, h3{
 
 }
 
+/* Add color to the inputs */
+.input-text:invalid:not(:placeholder-shown):not(:focus):not([type="date"]) {
+    border: 1px solid red;
+    animation: jump 2s ease-in-out infinite alternate;
+}
+
+.input-text.input__invalid {
+    border: 1px solid red;
+    animation: jump 2s ease-in-out infinite alternate;
+}
+
+.input-text:valid {
+    border: 3px solid green;
+    animation: none;
+}
+
+
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 @media (min-width: 768px) {
     .contenedor-campos{
@@ -264,3 +294,5 @@ h1, h2, h3{
         display: none;
     }
 }
+
+

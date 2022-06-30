@@ -14,7 +14,6 @@
     <link rel="preload" href="css/normalize.css" as="style">
     <link href="css/normalize.css" rel="stylesheet">
 
-    <link rel="preload" href="css/style.css" as="style">
     <link href="css/style.css" rel="stylesheet">
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -58,15 +57,14 @@
         <section class="seccion-formulario">
 
             <div class="contenedor-formulario">
-
-                <form class="formulario" autocomplete="on">
+                <form class="formulario" autocomplete="on" action="">
                     <fieldset>
                         <legend>Registro</legend>
                         <div class="contenedor-campos">
 
                             <div class="campos">
                                 <label>Nombre completo</label>
-                                <input id="nombre" class="input-text" type="text" placeholder="Nombre" required>
+                                <input id="nombre" class="input-text" type="text" placeholder="Nombre" required pattern="[a-zA-Z\s]{1,40}">
                             </div>
 
                             <div class="campos">
@@ -76,27 +74,26 @@
 
                             <div class="campos">
                                 <label>Ciudad</label>
-                                <input class="input-text" type="text" placeholder="Ciudad" required>
+                                <input class="input-text" type="text" placeholder="Ciudad" required pattern="[a-zA-Z\s]{1,25}">
                             </div>
 
                             <div class="campos">
                                 <label>Numero de Celular</label>
-                                <input class="input-text" type="tel" placeholder="Telefono" required>
+                                <input class="input-text" type="tel" placeholder="Telefono" required pattern="[0-9]{7,14}">
                             </div>
-
                             <div class="campos">
                                 <label>Correo</label>
-                                <input class="input-text" type="email" placeholder="E-mail" required>
+                                <input class="input-text" type="email" placeholder="E-mail" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$">
                             </div>
 
                             <div class="campos">
                                 <label>Contraseña</label>
-                                <input class="input-text" type="password" placeholder="Contraseña" required>
+                                <input class="input-text" type="password" placeholder="Contraseña" required pattern="^.{4,12}$">
                             </div>
 
                             <div class="campos">
                                 <label>Confirmar contraseña</label>
-                                <input class="input-text" type="password" placeholder="Confirmar contraseña" required>
+                                <input class="input-text" type="password" placeholder="Confirmar contraseña" required pattern="^.{4,12}$">
                             </div>
                         </div>
 
@@ -114,52 +111,13 @@
 
 
 
-                    <div>
-                        <input class="boton" type="submit" value=" REGISTRARSE" onclick="enviarDatos()">
-                    </div>
+                    <input class="boton" type="submit" value=" REGISTRARSE">
 
                 </form>
             </div>
 
         </section><!-- contenedor-formulario -->
-
-        <script>
-
-
-            function enviarDatos(){
-                let respuestas=document.getElementsByClassName("input-text");
-                console.log(respuestas);
-                let contador=0;
-                for(let i=0; i<respuestas.length;i++){
-                    if (respuestas[i].value===""){
-                        contador+=1
-                    }
-                }
-                console.log(contador);
-                if (document.getElementsByClassName("check")[0].validity.valueMissing==true){
-                    contador++;
-                }
-
-                console.log(contador);
-                if (contador!=0){
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Oops...',
-                        text: 'Completa todos los datos',
-                        footer: 'Es necesario para registrarse',
-                        width:'50%'
-
-                })}else{
-                    Swal.fire({
-                        icon: 'success',
-                        title:'Todo genial',
-                        text: 'Datos guardados exitosamente',
-                        time:20000
-                    })
-                }
-            }
-
-
+        <script src="./index.js">
         </script>
     </div>
 </body>

@@ -23,26 +23,15 @@ function validatePass(){
 }
 
 function enviarDatos(e){
+  let contador=true;
     e.preventDefault();
-    let contador=0;
     for(let i=0; i<respuestas.length;i++){
         if (respuestas[i].value===""){
-            contador += 1;
+            contador =false;
         }
     }
-    if (document.getElementsByClassName("check")[0].validity.valueMissing==true){
-        contador++;
-    }
-
-    if (contador!=0){
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Ambas contraseñas deben ser iguales',
-        footer: 'Verifca los datos',
-        width:'50%'
-      })
-    }else{
+    if (document.getElementsByClassName("check")[0].validity.valueMissing==true) contador = false;
+    if (contador==true){
       form.reset();
       Swal.fire({
         icon: 'success',
@@ -51,8 +40,3 @@ function enviarDatos(e){
       })
     }
 }
-
-
-/* TODO:
-  => Refactor del remover el contador
-*/

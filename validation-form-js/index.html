@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - SpaceCode</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@200;700&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/normalize.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body>
+    <div class="contenedor">
+
+
+        <section class="banner">
+
+            <div class="contenedor-baner">
+
+                <div class="titular-img">
+                    <img class="codespace" src="img/codespace.png">
+                </div>
+
+                <div class="titular-text">
+
+                    <div class="space">
+                        <p>Space</p>
+                    </div>
+                    <div class="code">
+                        <p>Code</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="contenedor-imagen">
+                <div class="imagen">
+                </div>
+            </div>
+
+
+        </section><!-- banner -->
+
+        <section class="seccion-formulario">
+
+            <div class="contenedor-formulario">
+                <form class="formulario" autocomplete="on" action="">
+                    <fieldset>
+                        <legend>Registro</legend>
+                        <div class="contenedor-campos">
+
+                            <div class="campos">
+                                <label>Nombre completo</label>
+                                <input id="nombre" class="input-text" type="text" placeholder="Nombre" required pattern="[a-zA-Z\s]{1,40}">
+                            </div>
+
+                            <div class="campos">
+                                <label>Fecha de nacimiento</label>
+                                <input class="input-text" type="date" placeholder="Fecha de nacimiento" required>
+                            </div>
+
+                            <div class="campos">
+                                <label>Ciudad</label>
+                                <input class="input-text" type="text" placeholder="Ciudad" required pattern="[a-zA-Z\s]{1,25}">
+                            </div>
+
+                            <div class="campos">
+                                <label>Numero de Celular</label>
+                                <input class="input-text" type="tel" placeholder="Telefono" required pattern="[0-9]{7,14}">
+                            </div>
+                            <div class="campos">
+                                <label>Correo</label>
+                                <input class="input-text" type="email" placeholder="E-mail" required pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" autocomplete="email">
+                            </div>
+
+                            <div class="campos">
+                                <label>Contraseña</label>
+                                <input class="input-text" type="password" placeholder="Contraseña" required pattern="^.{4,12}$" autocomplete="new-password">
+                            </div>
+
+                            <div class="campos">
+                                <label>Confirmar contraseña</label>
+                                <input class="input-text" type="password" placeholder="Confirmar contraseña" required pattern="^.{4,12}$" autocomplete="new-password">
+                            </div>
+                        </div>
+
+
+                        <div class="centrar">
+                            <div class="terminos">
+                                <input class="check" type="checkbox" required>
+
+                                <p>Al registrarte aceptas nuestras condidiciones, la <a href="">Politica de datos</a> y <a href="">Politica de
+                                    cookies</a></p>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+
+
+                    <input class="boton" type="submit" value=" REGISTRARSE">
+
+                </form>
+            </div>
+
+        </section><!-- contenedor-formulario -->
+        <script src="./index.js">
+        </script>
+    </div>
+</body>
+
+</html>

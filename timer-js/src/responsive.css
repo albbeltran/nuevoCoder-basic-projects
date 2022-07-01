@@ -1,0 +1,66 @@
+/** dispositivos móviles en vista viewport (vertical) */
+@media (max-width: 575px) {
+   
+   
+    .container-body{
+        flex-wrap:wrap;
+    }
+    .column1{
+        margin-top:40px;  
+    }
+    .column2,
+    .column3,
+    .column4{
+        margin-top:40px;
+    }
+}
+  
+  /** dispositivos pequeños en vista landscape (horizontal) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .container-body{
+        flex-wrap:wrap;
+    }
+    .column1{
+        margin-top:40px;  
+    }
+    .column2,
+    .column3,
+    .column4{
+        margin-top:40px;
+    }
+}
+  
+/** dispositivos medianos (tablets) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .container-body{
+        flex-wrap:wrap;
+    }
+    .column1{
+        margin-top:40px;  
+    }
+    .column2,
+    .column3,
+    .column4{
+        margin-top:40px;
+    }
+}
+  
+/** dispositivos grandes (desktops) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container-body{
+        flex-wrap:wrap;
+    }
+    .column1{
+        margin-top:40px;  
+    }
+    .column2,
+    .column3,
+    .column4{
+        margin-top:40px;
+    }
+}
+  
+/** dispositivos extra grandes (monitores grandes, tvs) */
+@media (min-width: 1200px) {
+    
+}

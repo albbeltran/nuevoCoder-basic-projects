@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="src/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <title>Temporizador</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1 class="titulo">Temporizador App</h1>
+
+    <div class="container-temporizador">
+      <div class="container-counter">
+        <input id="horas" type="number" value='0' /><span>horas</span>
+        <div class="btn-function-container">
+          <button id='btn-sumar-horas' class="button button-sumar">&plus;</button>
+          <!-- <span id="horas">0initTemporizador</span> <span>horas</span> -->
+          <button id='btn-restar-horas' class="button button-restar"> &minus;</button>
+        </div>
+      </div>
+      <div class="container-counter">
+        <input id="minutos" type="number" value='0' /><span>minutos</span>
+        <div class="btn-function-container">
+          <button id='btn-sumar-minutos' class="button button-sumar">&plus;</button>
+          <!-- <span id="minutos">0</span> <span>minutos</span> -->
+          <button id='btn-restar-minutos' class="button button-restar"> &minus;</button>
+        </div>
+      </div>
+      <div class="container-counter">
+        <input id="segundos" type="number" value='0' /><span>segundos</span>
+        <!-- <span id="segundos">0 </span> <span>segundos</span> -->
+        <div class="btn-function-container">
+          <button id='btn-sumar-segundos' class="button button-sumar">&plus;</button>
+          <button id='btn-restar-segundos' class="button button-restar"> &minus;</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="buttons">
+      <div class="container-btn-fun" id="pause">
+        <button id='btn-pausa' class="button-funciones funciones-pause" disabled></button>
+      </div>
+      <div class="container-btn-fun" id="stop">
+        <button id='btn-detener' class="button-funciones funciones-stop"></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup_disable">
+    <div class="popup__container ">
+      <h2>El tiempo se acabó</h2>
+      <div>
+        <svg class="popup__container--icon" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <button class="btn-popup">OK</button>
+    </div>
+  </div>
+  <footer>
+    <div class="container-footer-info">
+      <h2> Team </h2> <br><br>
+      <div class="container-body">
+
+        <div class="column1">
+          <!--VICTORINO-->
+          <h3>Victorino</h3>
+          <div class="row">
+            <img src="icons/LinkedIn.png">
+            <a href="https://www.linkedin.com/in/jos%C3%A9-victorino-ru%C3%ADz-lavida-ba86a520b/">Jośe Victorino</a>
+          </div>
+          <div class="row">
+            <img src="icons/Github.png">
+            <a href="https://github.com/Victorinolavida">Victorinolavida</a>
+          </div>
+        </div>
+        <div class="column2">
+          <!--KARY-->
+          <h3>Kary</h3>
+          <div class="row">
+            <img src="icons/LinkedIn.png">
+            <a href="https://www.linkedin.com/in/karina-mart%C3%ADnez-guerrero-82ba32125/">Karina Martínez Guerrero</a>
+          </div>
+          <div class="row">
+            <img src="icons/Github.png">
+            <a href="https://github.com/karysistemas10">karysistemas10</a>
+          </div>
+        </div>
+        <div class="column3">
+          <!--ANDRES-->
+          <h3>Andrés</h3>
+          <div class="row">
+            <img src="icons/LinkedIn.png">
+            <a href="/">userAndreslinkedIn</a>
+          </div>
+          <div class="row">
+            <img src="icons/Github.png">
+            <a href="https://github.com/androx999">androx999</a>
+          </div>
+        </div>
+        <div class="column3">
+          <!--VIRI-->
+          <h3>Viridiana</h3>
+          <div class="row">
+            <img src="icons/LinkedIn.png">
+            <a href="https://www.linkedin.com/in/viridiana-esparza-mac%C3%ADas/">Viridiana Esparza Macías</a>
+          </div>
+          <div class="row">
+            <img src="icons/Github.png">
+            <a href="https://github.com/ViridianaEM">ViridianaEM</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-footer">
+      <div class="footer">
+        <div class="information">
+          <label>SpaceCode</label>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="src/index.js"></script>
+</body>
+
+</html>

@@ -1,9 +1,29 @@
 const form = document.querySelector('.formulario');
 form.addEventListener('submit', enviarDatos);
+const respuestas = document.getElementsByClassName("input-text"); // get the input just once and not every single time that ocurred the event
+const passwords = Array.from(respuestas).filter(item => item.type === 'password');
+
+// events to compare the passwords
+passwords.forEach(input =>  {
+  input.addEventListener('input', validatePass);
+  input.addEventListener('blur', validatePass);
+})
+
+// Evaluate the passwords
+function validatePass(){
+  const [pass1, pass2] = passwords;
+  if(pass1.value !== pass2.value) {
+      pass1.classList.add('invalid-input')
+      pass2.classList.add('invalid-input')
+  }
+  else {
+    pass1.classList.remove('invalid-input')
+    pass2.classList.remove('invalid-input')
+  }
+}
 
 function enviarDatos(e){
     e.preventDefault();
-    let respuestas=document.getElementsByClassName("input-text");
     let contador=0;
     for(let i=0; i<respuestas.length;i++){
         if (respuestas[i].value===""){
@@ -14,16 +34,12 @@ function enviarDatos(e){
         contador++;
     }
 
-    if(respuestas[5].value !== respuestas[6].value) {
-      contador += 1;
-    }
-
     if (contador!=0){
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
-        text: 'Completa todos los datos correctamente',
-        footer: 'Es necesario para registrarse',
+        text: 'Ambas contraseñas deben ser iguales',
+        footer: 'Verifca los datos',
         width:'50%'
       })
     }else{
@@ -39,5 +55,4 @@ function enviarDatos(e){
 
 /* TODO:
   => Refactor del remover el contador
-  => Refactor de la evalucacion de los password
 */

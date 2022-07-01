@@ -102,6 +102,7 @@ h1, h2, h3{
     background-color:var(--blanco);
     border:solid 1px var(--blanco);
     border-radius: 10px;
+    outline: 0;
 }
 
 .centrar{
@@ -211,14 +212,15 @@ h1, h2, h3{
     animation: jump 2s ease-in-out infinite alternate;
 }
 
-.input-text.input__invalid {
-    border: 1px solid red;
-    animation: jump 2s ease-in-out infinite alternate;
-}
 
 .input-text:valid {
     border: 3px solid green;
     animation: none;
+}
+
+.input-text.invalid-input {
+    border: 1px solid red;
+    animation: jump 2s ease-in-out infinite alternate;
 }
 
 
